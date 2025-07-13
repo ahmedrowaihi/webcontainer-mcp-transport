@@ -1,6 +1,6 @@
 # WebContainer MCP Transport
 
-This directory contains the official WebContainer transport implementation for the Model Context Protocol (MCP). This transport allows you to run MCP servers inside a WebContainer environment in the browser.
+This directory contains the unofficial WebContainer transport implementation for the Model Context Protocol (MCP). This transport allows you to run MCP servers inside a WebContainer environment in the browser.
 
 > **🚀 Full Example**: See a complete working implementation with interactive dashboard at [webcontainer-mcp-browser](https://github.com/ahmedrowaihi/webcontainer-mcp-browser)
 
@@ -214,3 +214,12 @@ const transport = new WebContainerTransport({
 ## Browser Compatibility
 
 Requires modern browsers with WebContainer support (Chrome, Edge recommended).
+
+## Browser Requirements
+
+To use WebContainers, your app must serve pages with the following HTTP headers:
+
+```text
+  "Cross-Origin-Opener-Policy": "same-origin",
+  "Cross-Origin-Embedder-Policy": "require-corp"
+```

@@ -1,8 +1,16 @@
 {
-  "name": "transport",
+  "name": "@ahmedrowaihi/webcontainer-mcp-transport",
   "module": "webcontainer-transport.ts",
+  "version": "0.0.1",
+  "description": "unofficial WebContainer transport implementation for the Model Context Protocol (MCP). This transport allows you to run MCP servers inside a WebContainer environment in the browser",
+  "author": "Ahmed Rowaihi",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ahmedrowaihi/webcontainer-mcp-transport"
+  },
   "type": "module",
-  "private": true,
+  "private": false,
   "exports": {
     ".": {
       "types": "./dist/webcontainer-transport.d.ts",
@@ -13,8 +21,23 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "mcp",
+    "webcontainer",
+    "transport",
+    "model context protocol",
+    "webcontainer transport"
+  ],
+  "homepage": "https://github.com/ahmedrowaihi/webcontainer-mcp-transport",
+  "bugs": {
+    "url": "https://github.com/ahmedrowaihi/webcontainer-mcp-transport/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "build": "unbuild"
+    "build": "unbuild",
+    "prepublishOnly": "bun run build"
   },
   "devDependencies": {
     "unbuild": "^3.5.0",
