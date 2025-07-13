@@ -1,0 +1,28 @@
+{
+  "name": "transport",
+  "module": "webcontainer-transport.ts",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": {
+      "types": "./dist/webcontainer-transport.d.ts",
+      "import": "./dist/webcontainer-transport.mjs",
+      "require": "./dist/webcontainer-transport.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "unbuild"
+  },
+  "devDependencies": {
+    "unbuild": "^3.5.0",
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5",
+    "@modelcontextprotocol/sdk": "1.15.1",
+    "@webcontainer/api": "1.6.1"
+  }
+}
